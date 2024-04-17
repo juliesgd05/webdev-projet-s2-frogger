@@ -1,1 +1,140 @@
-/*Style*/
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.bordexterne{
+    padding-right: 25%;
+    background-color: white;
+    z-index: 5;
+}
+
+.plateaueEntier{
+    position: relative;
+    background-color: black;
+    width: 50%;
+    z-index: 1;
+}
+
+.ligneScoreAffichage{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-right:40%;
+    padding-top: 1%;
+}
+
+.scoreAffichage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.plateauDeJeu{
+    display: flex;
+    flex-direction: column;
+}
+
+.caseFin1{
+    background-color: rgb(0, 110, 255);
+    /*padding-right: 10%;
+    padding-top: 8%;*/
+    width: 10%;
+    height: 4vmax;
+}
+
+.caseFin2{
+    background-color: rgb(0, 110, 255);
+    /*padding-right: 10%;
+    padding-top: 8%;*/
+    width: 10%;
+    height: 4vmax;
+}
+
+.caseFin3{
+    background-color: rgb(0, 110, 255);
+    /*padding-right: 10%;
+    padding-top: 8%;*/
+    width: 10%;
+    height: 4vmax;
+}
+
+.caseFin4{
+    background-color: rgb(0, 110, 255);
+    /*padding-right: 10%;
+    padding-top: 8%;*/
+    width: 10%;
+    height: 4vmax;
+}
+
+.caseFin5{
+    background-color: rgb(0, 110, 255);
+    /*padding-right: 10%;
+    padding-top: 8%;*/
+    width: 10%;
+    height: 4vmax;
+}
+
+.victory-img {
+    width: 100%;
+    height: 100%;
+    display: flex;         
+    justify-content: center;
+    align-items: center;
+}
+
+.victory-img img {
+    max-width: 80%; 
+    max-height: 80%; /* Ajustez la taille de l'image selon vos besoins */
+}
+
+.rectangle{
+    padding: 3.25% 0%;
+	background-color:#069;
+}
+
+.arriver{
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 100%;
+}
+
+.sansDanger{
+    background-color: rgb(73, 108, 154);
+}
+
+.voiture{
+    background-color: black;
+}
+
+#frog{
+    position: absolute;
+}
+
+.depart{
+    background-color: black;
+}
+
+.frogger img {
+    z-index: 5;
+    height: 3vw;
+    width: 3vw;
+}
+
+.plateauPourJS{
+    position: relative;
+    z-index: 3;
+}
+#fly{
+    z-index: 4;
+}
+.flying img{
+    z-index: 4;
+    max-width: 3vw;
+    max-height: 3vw;
+} 
