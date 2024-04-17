@@ -1,4 +1,3 @@
-//Script
 var frog = document.getElementById("frog");
 
 var frogPositionX = 0;
