@@ -1,1 +1,110 @@
 /*Style*/
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.bordexterne{
+    padding-right: 25%;
+    background-color: white;
+    /* opacity: 0.1; */
+    z-index: 5;
+}
+
+.plateaueEntier{
+    position: relative;
+    background-color: black;
+    width: 50%;
+    z-index: 1;
+}
+
+.ligneScoreAffichage{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left:1%;
+    padding-top: 1%;
+    /* padding-bottom: 1%; */
+}
+
+.scoreAffichage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#plateauDeJeu{
+    display: flex;
+    flex-direction: column;
+}
+
+.caseFin{
+    background-color: rgb(0, 110, 255);
+    height: 3vmax;
+    width: 8%;
+}
+
+.rectangle{
+    padding: 3.25% 0%;
+	background-color:#069;
+}
+
+.arriver{
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.sansDanger{
+    background-color: rgb(73, 108, 154);
+}
+
+.voiture{
+    background-color: black;
+}
+
+#frog{
+    position: absolute;
+}
+
+.depart{
+    background-color: black;
+}
+
+.frogger img {
+    position: relative;
+    z-index: 5;
+    height:3vw;
+    width: 3vw;
+    /* height: 3rem;
+    width: 3rem; */
+    opacity: 1 !important;
+}
+
+.plateauPourJS{
+    position: relative;
+    z-index: 3;
+}
+
+.log{
+    position: absolute;
+    top: 16%;
+    /* left: 25%; */
+    width: 5.5vw;
+    height: 2vw;
+    background-image: url("Obstacle.png");
+    z-index: 4;
+ }
+
+ .obstacle{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 107px;
+    height: 42px;
+    background-image: url("Obstacle.png");
+ }
