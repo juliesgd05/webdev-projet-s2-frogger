@@ -2,6 +2,13 @@ var frog = document.getElementById("frog");
 
 var frogPositionX = 0;
 var frogPositionY = window.innerHeight - frog.clientHeight; 
+var scoreDisplay = document.getElementById("score");
+var tailleEcran = screen.width;
+var tailleBordExtraineGauche = tailleEcran * 0.25;
+var taillebordextraineDroit = tailleEcran - tailleBordExtraineGauche;
+
+var tailleEcranHauteur = document.getElementById("plateauDeJeu").clientHeight;
+console.log(tailleEcranHauteur);
 
 frog.style.left = frogPositionX + "px";
 frog.style.top = frogPositionY + "px";
@@ -44,6 +51,61 @@ document.addEventListener("keydown", function(event) {
             break;
     }
 });
+
+function detectionSortiePlateauLargeur(frogPositionX) {
+    // var bordleft = tailleEcran*0.25;
+    // var bordright = tailleEcran-tailleEcran*0.25;
+    // console.log("bordleft : "+bordleft+", bordright : "+bordright+", tailleEcran : "+tailleEcran);
+    if (frogPositionX < 0) {
+        return false;
+    }
+    else if (frogPositionX > tailleEcran * 0.50-60) {
+        return false;
+    }
+    else {
+        return true;
+    }
+
+}
+
+function detectionSortiePlateauHauteurbas(frogPositionY, tailleEcranHauteur) {
+    // var bordhaut = tailleEcranHauteur*0.25;
+    // var bordright = tailleEcran-tailleEcran*0.25;
+    // var extrembas = window.innerHeight - frog.clientHeight;
+    if (frogPositionY > tailleEcranHauteur) {
+        console.log("detectionSortiePlateauHauteur : false1")
+        return false;
+    }
+    // else if (frogPositionY <0) {
+    //     console.log("detectionSortiePlateauHauteur : false2")
+    //     return false;
+    // }
+    else {
+        console.log("detectionSortiePlateauHauteur : vrai")
+        return true;
+    }
+}
+
+function detectionSortiePlateauHauteurhaut(frogPositionY, tailleEcranHauteur) {
+    // var bordhaut = tailleEcranHauteur*0.25;
+    // var bordright = tailleEcran-tailleEcran*0.25;
+    // var extrembas = window.innerHeight - frog.clientHeight;
+    // if (frogPositionY > tailleEcranHauteur) {
+    //     console.log("detectionSortiePlateauHauteur : false1")
+    //     return false;
+    // }
+    if (frogPositionY <0) {
+        console.log("detectionSortiePlateauHauteur : false2")
+        return false;
+    }
+    else {
+        console.log("detectionSortiePlateauHauteur : vrai")
+        return true;
+    }
+}
+
+console.log(frogPositionX, frogPositionY);
+console.log(detectionSortiePlateauLargeur(frogPositionX, tailleEcran));
 
 function collision(xfrog, yfrog, tab_obstacle) {
     for (let i=0; i<5; i++){
