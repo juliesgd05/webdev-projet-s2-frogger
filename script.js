@@ -32,34 +32,47 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-document.addEventListener("keydown", function(event) {
-    switch(event.key) {
+document.addEventListener("keydown", function (event) {
+    switch (event.key) {
         case "ArrowLeft":
-            moveFrog(-20, 0);
-            frog.style.transform = "rotate(" + (-90) + "deg)";
-            break; 
-        case "ArrowUp":
-            compteur += 10;
-            score += 10; 
-            if (score == compteur) {
-                scoreDisplay.innerText = "Score: " + score;
-            } else {
-                score = score - 10;
+            if (detectionSortiePlateauLargeur(frogPositionX - 20) == true) {
+                console.log("coordonée : "+frogPositionX+" , "+frogPositionY+ "; ArrowLeft = True");
+                moveFrog(-20, 0);
+                frog.style.transform = "rotate(" + (-90) + "deg)";
+                // console.log(frogPositionX);
             }
-            moveFrog(0, -20);
-            frog.style.transform = "rotate(" + (0) + "deg)"; 
+            break;
+        case "ArrowUp":
+            if (detectionSortiePlateauHauteurhaut(frogPositionY - 20, -tailleEcranHauteur) == true) {
+                console.log("coordonée : "+frogPositionX+" , "+frogPositionY+ "; ArrowUp = True");
+                compteur += 10;
+                score += 10;
+                if (score == compteur) {
+                    document.getElementById("score").innerText = "Score: " + score;
+                }
+                else { score = score - 10; }
+                moveFrog(0, -20);
+                frog.style.transform = "rotate(" + (0) + "deg)";
+            }
             break;
         case "ArrowRight":
-            moveFrog(20, 0);
-            frog.style.transform = "rotate(" + (90) + "deg)";
+            if (detectionSortiePlateauLargeur(frogPositionX + 20) == true) {
+                console.log("coordonée : "+frogPositionX+" , "+frogPositionY+ "; ArrowRight = True");
+                moveFrog(20, 0);
+                frog.style.transform = "rotate(" + (90) + "deg)";
+            }
             break;
         case "ArrowDown":
-            compteur = compteur - 10;
-            moveFrog(0, 20);
-            frog.style.transform = "rotate(" + (180) + "deg)";
+            if (detectionSortiePlateauHauteurbas(frogPositionY + 20, tailleEcranHauteur) == true) {
+                console.log("coordonée : "+frogPositionX+" , "+frogPositionY+ "; ArrowDown = True");
+                compteur = compteur - 10;
+                moveFrog(0, 20);
+                frog.style.transform = "rotate(" + (180) + "deg)";
+            }
             break;
     }
 });
+
 
 function checkWin() {
     var frogRect = frog.getBoundingClientRect();
