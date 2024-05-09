@@ -41,39 +41,7 @@ body{
     flex-direction: column;
 }
 
-.caseFin1{
-    background-color: rgb(0, 110, 255);
-    /*padding-right: 10%;
-    padding-top: 8%;*/
-    width: 10%;
-    height: 4vmax;
-}
-
-.caseFin2{
-    background-color: rgb(0, 110, 255);
-    /*padding-right: 10%;
-    padding-top: 8%;*/
-    width: 10%;
-    height: 4vmax;
-}
-
-.caseFin3{
-    background-color: rgb(0, 110, 255);
-    /*padding-right: 10%;
-    padding-top: 8%;*/
-    width: 10%;
-    height: 4vmax;
-}
-
-.caseFin4{
-    background-color: rgb(0, 110, 255);
-    /*padding-right: 10%;
-    padding-top: 8%;*/
-    width: 10%;
-    height: 4vmax;
-}
-
-.caseFin5{
+.caseFin{ /*Remplacement par une classe generale */
     background-color: rgb(0, 110, 255);
     /*padding-right: 10%;
     padding-top: 8%;*/

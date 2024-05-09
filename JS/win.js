@@ -1,21 +1,24 @@
 
+let winC = false; 
+let intervalCheck;
+
 function checkWin() {
     var frogRect = frog.getBoundingClientRect();
 
     // CaseFin 1
-    var caseFin1 = document.querySelector(".caseFin1");
+    var caseFin1 = document.getElementById("caseFin1");
     var caseFinRect1 = caseFin1.getBoundingClientRect();
     // CaseFin 2
-    var caseFin2 = document.querySelector(".caseFin2");
+    var caseFin2 = document.getElementById("caseFin2");
     var caseFinRect2 = caseFin2.getBoundingClientRect();
     // CaseFin 3
-    var caseFin3 = document.querySelector(".caseFin3");
+    var caseFin3 = document.getElementById("caseFin3");
     var caseFinRect3 = caseFin3.getBoundingClientRect();
     // CaseFin 4
-    var caseFin4 = document.querySelector(".caseFin4");
+    var caseFin4 = document.getElementById("caseFin4");
     var caseFinRect4 = caseFin4.getBoundingClientRect();
     // CaseFin 5
-    var caseFin5 = document.querySelector(".caseFin5");
+    var caseFin5 = document.getElementById("caseFin5");
     var caseFinRect5 = caseFin5.getBoundingClientRect();
     
     // CaseFin 1
@@ -26,7 +29,8 @@ function checkWin() {
         frogRect.bottom > caseFinRect1.top
     ) {
         caseFin1.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+        caseFin1.classList.add("win"); //on lui met la class win
+        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
     }
 
@@ -38,7 +42,8 @@ function checkWin() {
         frogRect.bottom > caseFinRect2.top
     ) {
         caseFin2.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+        caseFin2.classList.add("win"); //on lui met la class win
+        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
     }
 
@@ -50,7 +55,8 @@ function checkWin() {
         frogRect.bottom > caseFinRect3.top
     ) {
         caseFin3.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+        caseFin3.classList.add("win"); //on lui met la class win
+        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
     }
 
@@ -62,7 +68,8 @@ function checkWin() {
         frogRect.bottom > caseFinRect4.top
     ) {
         caseFin4.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+        caseFin4.classList.add("win"); //on lui met la class win
+        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
     }
 
@@ -74,9 +81,21 @@ function checkWin() {
         frogRect.bottom > caseFinRect5.top
     ) {
         caseFin5.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+        caseFin5.classList.add("win"); //on lui met la class win
+        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
+    }
+    
+    //Verification pour le changement de niveau
+    if(caseFin1.classList.contains("win") && caseFin2.classList.contains("win") && caseFin3.classList.contains("win") && caseFin4.classList.contains("win") && caseFin5.classList.contains("win")){ //On Verifie si les cases contienne la class = win si ou alors on viens dire que on a gagner
+        caseFin3.classList.add("stop_fly");
+        winC = true; // On lui passe en true comme ça, ça se stop
+        clearInterval(intervalCheck); // stop l'interval
+        console.log("Changement de Niveau !");
+
     }
 }
 
-setInterval(checkWin, 100);
+if(!winC){ // appel l'interval si winC == false
+    intervalCheck = setInterval(checkWin, 100);
+}
