@@ -11,7 +11,7 @@ function waterDeath(){
         frogRect.top < waterRect.bottom &&
         frogRect.bottom > waterRect.top
     ) {
-        console.log("Vous êtes mort noyé !");
+        console.log("Vous êtes mort noyé !!");
         resetFrogPosition();
         decreaseLife()
     }
