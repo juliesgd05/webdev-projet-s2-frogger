@@ -54,9 +54,10 @@ class Obstacles {
 }
 
 
-let c = new Obstacles(25);
+var c = new Obstacles(25);
 for (let i = 0; i < 5; i++) {
-    let a = new Obstacle(i * 100, 20, "left", 1, 25);
+    //let a = new Obstacle(i * 100, 60, "left", 1, 25);
+    let a = new Obstacle(i * 100, 60, "left", 0, 0);
     c.addElement(a);
 }
 intervalId = setInterval(function () { c.moveElements(); }, c.speed);
