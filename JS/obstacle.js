@@ -45,21 +45,60 @@ class Obstacles {
     moveElements() {
         for (const obstacle of this.content) {
             obstacle.moveObstacle();
-            if (obstacle.x >= (screen.width) * 0.75) {
+            if ( ( obstacle.x >= (screen.width) * 0.4) /*|| ( obstacle.x < 20 ) */) {
                 obstacle.removeObstacle();
-                this.content.pop();
+                this.content.shift();
             }
         }
     }
+	
+	length() {
+		let n=0;
+		for (const obstacle of this.content) {
+				n++;
+		}
+		return(n);
+	}
 }
 
+function checkForNewObstacle() {
+	for (let i = 0; i < 5; i++) {
+		checkForRow(i);
+	}
+}
 
-let c = new Obstacles(25);
+function checkForRow(idx) {
+	if ( c[idx].length() < maxObstacle ) {
+		
+		rec=Math.floor(Math.random() * 100) + rnd;
+        /* fait un petit rendu aléatoire, mais augmente une valeur à chaque boucle pour s'assurer qu'un nouvel obstacle est créé après quelques temps */
+		if ( rec > 98 ) {
+			rnd=0;
+			if ( (idx % 2) == 0 ) {
+				let a = new Obstacle( 1, (idx * 5)+20 , "left", step[idx], 100);
+				c[idx].addElement(a);
+			} else {
+				let a = new Obstacle( 1, (idx * 5)+20 , "left", step[idx], 100);
+				c[idx].addElement(a);
+			}
+		}
+	}
+		
+	c[idx].moveElements();	
+}
+			
+nObstacle=0;
+maxObstacle=20;
+rnd=0;
+let c = [];
+let step = [];
 for (let i = 0; i < 5; i++) {
-    let a = new Obstacle(i * 100, 20, "left", 1, 25);
-    c.addElement(a);
+	c[i] = new Obstacles(maxObstacle);
+	step[i] = (Math.floor(Math.random() * (3-1+1))) + 1;
+    console.log(step[i]);
 }
-intervalId = setInterval(function () { c.moveElements(); }, c.speed);
+
+intervalId = setInterval( checkForNewObstacle , 30);
 
 document.getElementById("score").innerText = "Score: " + score;
 
