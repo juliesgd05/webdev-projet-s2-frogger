@@ -1,9 +1,11 @@
+// This class represents a single obstacle it contains information about the obstacle as well as a target to the html element
 class Obstacle {
 
     step = 1;
     name = "obstacle";
     image = "Obstacle.png";
 
+	// create the obstacle, speed is useless and will be removed
     constructor(x, y, dir, step, speed) {
         this.x = x;
         this.y = y;
@@ -11,22 +13,24 @@ class Obstacle {
         this.step = step;
         this.speed = speed;
         this.target = document.createElement("div");
+		// Create the HTML element representing the obstacle
         document.getElementsByClassName("rectangle")[0].appendChild(this.target);
         this.target.className = this.name;
     }
-
+	
     moveObstacle() {
         this.x += this.step;
         this.target.style.left = (this.x + "px");
         this.target.style.top = (this.y + "%");
     }
-
+	
     removeObstacle() {
         this.target.remove();
     }
 
 }
 
+// This class is made to store obstacles, make them appear and disapear
 class Obstacles {
 
     constructor(speed) {
