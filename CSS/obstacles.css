@@ -1,0 +1,21 @@
+
+/* TODO change from px to something else to insure correct scaling */
+.log {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 107px;
+    height: 42px;
+    background-image: url("../IMAGE/log.png");
+    z-index: 4;
+}
+
+.car {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*width: 107px;
+    height: 42px;*/
+    background-image: url("../IMAGE/car_slow.png");
+    z-index: 4;
+}
