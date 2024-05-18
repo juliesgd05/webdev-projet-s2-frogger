@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     flex-direction: row;
@@ -127,15 +128,10 @@ body{
     max-height: 3vw;
 } 
 
-.log{
-    position: absolute;
-    top: 16%;
-    /* left: 25%; */
-    width: 5.5vw;
-    height: 2vw;
-    background-image: url("../IMAGE/Obstacle.png");
-    z-index: 4;
- }
+#lives {
+    margin-left: 20px; 
+}
+
 
 .obstacle{
     position: absolute;
@@ -145,3 +141,4 @@ body{
     height: 42px;
     background-image: url("../IMAGE/Obstacle.png");
 }
+
