@@ -65,15 +65,3 @@ intervalId = setInterval(function () { c.moveElements(); }, c.speed);
 document.getElementById("score").innerText = "Score: " + score;
 
 
-function detectionSortiePlateauLargeur(frogPositionX) {
-    if (frogPositionX < 0) {
-        return false;
-    }
-    else if (frogPositionX > tailleEcran * 0.50 - 60) {
-        return false;
-    }
-    else {
-        return true;
-    }
-
-}
