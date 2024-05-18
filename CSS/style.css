@@ -27,8 +27,9 @@ body{
     display: flex;
     flex-direction: column;
     color: white;
-    padding-right:40%;
-    padding-top: 1%;
+    /* padding-right:40%; */
+    /* padding-top: 1%; */
+    width: 50%;
 }
 
 .scoreAffichage{
@@ -40,14 +41,17 @@ body{
 .plateauDeJeu{
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .caseFin{ /*Remplacement par une classe generale */
-    background-color: rgb(0, 110, 255);
-    /*padding-right: 10%;
-    padding-top: 8%;*/
+    /* background-color: #069; */
+    background-image: url(../stylesrhttps://isenengineering.fr/eau.jpeg);
     width: 10%;
     height: 4vmax;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+
 }
 
 .victory-img {
@@ -64,27 +68,37 @@ body{
 }
 
 .rectangle{
-    padding: 3.25% 0%;
-	background-color:#069;
+    /* width: 50%; */
+    height: 3.5vw;
+    /* padding: 3.25% 0%; */
+	/* background-color:#069; */
 }
 
 .arriver{
-    background-color: green;
+    /* background-color: green; */
+    background-image: url(../IMAGE/herbe.jpg);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 1%;
     padding-left: 1%;
     padding-right: 1%;
-    width: 100%;
+    width: 98%;
+}
+
+.eau{
+	/* background-color:#069; */
+    background-image: url(../IMAGE/eau.jpeg);
 }
 
 .sansDanger{
-    background-color: rgb(73, 108, 154);
+    /* background-color: rgb(73, 108, 154); */
+    background-image: url(../IMAGE/sansDanger.png);
 }
 
 .voiture{
     background-color: black;
+    /* background-image: url(../IMAGE/istockphoto-482030962-612x612.jpg); */
 }
 
 #frog{
@@ -116,5 +130,15 @@ body{
 
 #lives {
     margin-left: 20px; 
+}
+
+
+.obstacle{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 107px;
+    height: 42px;
+    background-image: url("../IMAGE/Obstacle.png");
 }
 
