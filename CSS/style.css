@@ -75,7 +75,7 @@ body{
 
 .arriver{
     /* background-color: green; */
-    background-image: url(../assets/herbe.jpg);
+    background-image: url(../IMAGE/herbe.jpg);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,17 +87,17 @@ body{
 
 .eau{
 	/* background-color:#069; */
-    background-image: url(../assets/eau.jpeg);
+    background-image: url(../IMAGE/eau.jpeg);
 }
 
 .sansDanger{
     /* background-color: rgb(73, 108, 154); */
-    background-image: url(../assets/sansDanger.png);
+    background-image: url(../IMAGE/sansDanger.png);
 }
 
 .voiture{
     background-color: black;
-    /* background-image: url(../assets/istockphoto-482030962-612x612.jpg); */
+    /* background-image: url(../IMAGE/istockphoto-482030962-612x612.jpg); */
 }
 
 #frog{
@@ -133,7 +133,7 @@ body{
     /* left: 25%; */
     width: 5.5vw;
     height: 2vw;
-    background-image: url("../assets/Obstacle.png");
+    background-image: url("../IMAGE/Obstacle.png");
     z-index: 4;
  }
 
@@ -143,5 +143,5 @@ body{
     left: 0px;
     width: 107px;
     height: 42px;
-    background-image: url("../assets/Obstacle.png");
+    background-image: url("../IMAGE/Obstacle.png");
 }
