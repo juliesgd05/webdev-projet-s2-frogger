@@ -1,9 +1,10 @@
+// This class represents a single obstacle it contains information about the obstacle as well as a target to the html element
 class Obstacle {
 
 
-    constructor(x, y, dir, step, speed, name, image) {
-    	this.name = name;
-    	this.image = image;
+	// create the obstacle, speed is useless and will be removed
+    constructor(x, y, dir, step, speed) {
+
         this.x = x;
         this.y = y;
         this.dir = dir;
@@ -14,39 +15,24 @@ class Obstacle {
 
     spawnObstacle() {
         this.target = document.createElement("div");
+		// Create the HTML element representing the obstacle
         document.getElementsByClassName("rectangle")[0].appendChild(this.target);
         this.target.className += this.name;
     }
-   
-    // TODO redo the deplacement so it scales better to different screen sizes and resolutions
+
     moveObstacle() {
         this.x += this.step;
         this.target.style.left = (this.x + "px");
         this.target.style.top = (this.y + "%");
     }
-    
+
     removeObstacle() {
         this.target.remove();
     }
 
 }
 
-class Log extends Obstacle {
-
-    constructor(x, y, step) {
-	super(x, y, "l", step, 0, "log", "foo");
-	this.spawnObstacle()
-    }
-}
-
-class Car extends Obstacle {
-
-    constructor(x, y, step) {
-	super(x, y, "l", step, 0, "car", "foo");
-	this.spawnObstacle()
-    }
-}
-
+// This class is made to store obstacles, make them appear and disapear
 class Obstacles {
 
     constructor(speed) {
