@@ -14,8 +14,9 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    /*width: 107px;
-    height: 42px;*/
+    width: 65px;
+    height: 41px;
     background-image: url("../IMAGE/car_slow.png");
+    background-size : 60px;
     z-index: 4;
 }
