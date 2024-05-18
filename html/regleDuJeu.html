@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/regleDuJeu.css">
+    <title>Règle du Jeu</title>
+</head>
+
+<body>
+    <h1>Règle Du Jeu</h1>
+    <div  class="dispositionBouton">
+        <div class="button" onclick="RedirectionPourRecommencer()">
+            <h2>Acceuil</h2>
+        </div>
+    </div>
+    <div>
+        <h3>Système de jeu</h3>
+        <p class="text">Le but du jeu est de diriger des grenouilles jusqu'à leurs maisons.
+            Pour cela, le joueur doit d'abord traverser une route en évitant des
+            voitures qui roulent à différentes vitesses puis une rivière aux courants
+            changeants en passant d'objets en objets. La grenouille meurt si elle touche
+            une voiture ou si elle tombe dans la rivière. Elle peut attraper des mouches bonus au passage</p>
+    </div>
+    <div class="seDeplacer">
+        <h3>Comment se déplacer ?</h3>
+        <div class="elementSeDeplacer">
+            <p class="text">Pour se déplacer il faudra utiliser les flèche de votre clavier</p>
+            <img src="../assets/flecheClavier.png" alt="TOuche flèche clavier">
+        </div>
+    </div>
+    <div class="paramettreDuJeu">
+        <div class="seDeplacer">
+            <h3>Personnage :</h3>
+            <div class="elementSeDeplacer">
+                <p>La grenouille :</p>
+                <img src="../assets/frog.png" alt="la grenouille" id="grenouille">
+            </div>
+        </div>
+
+        <div class="seDeplacer">
+            <div>
+                <h3>Obstacles :</h3>
+                <div class="elementSeDeplacer">
+                    <p>Les voitures</p>
+                    <img src="" alt="obstacle la voiture">
+                </div>
+                <div class="elementSeDeplacer">
+                    <p>Les troncs d'arbre</p>
+                    <img src="../assets/Obstacle.png" alt="obstacle le trons d'arbre" id="tron">
+                </div>
+            </div>
+        </div>
+        <div class="seDeplacer">
+            <h3>Le terrain :</h3>
+            <div class="elementSeDeplacer">
+                <div>
+                    <p>L'eau : pour la traverser il faut positionner la granouille sur les trons d'arbres afin de ne pas
+                        mouriir et de perdre une vie </p>
+                    <p>la route : la grenbouille peut aller sur la route sans mourir mais il faudra eviter les voitures
+                        pour
+                        ne pas perdre de vie</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../scripts/redirection.js"></script>
+</body>
+
+</html>

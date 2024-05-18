@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Frogger Jeu</title>
+</head>
+
+<body>
+
+    <div class="bordexterne"></div>
+
+    <div class="plateaueEntier">
+
+
+        <div class="scoreAffichage">
+            <div class="ligneScoreAffichage">
+                <div id="score" class="affichage">0</div>
+            </div>
+            <div class="ligneScoreAffichage">
+                <div>High Score :</div>
+                <div id="highScore">0</div>
+            </div>
+        </div>
+
+        <div id="plateauDeJeu">
+            <div class="frogger" id="frog"><img src="../assets/frog.png" id="frogger_image"></div>
+            <div class="arriver">
+                <div id="caseFin1" class="caseFin"> </div>
+                <!--Id a la place de la classe, mieux pour le js plutard, class caseFin pour le css-->
+                <div id="caseFin2" class="caseFin"> </div>
+                <div id="caseFin3" class="caseFin"> </div>
+                <div id="caseFin4" class="caseFin"> </div>
+                <div id="caseFin5" class="caseFin"></div>
+            </div>
+            <div class="eau">
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+            </div>
+            <div class="rectangle sansDanger"></div>
+            <div class="voiture">
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+            </div>
+            <div class="rectangle sansDanger"></div>
+            <!-- <div class="rectangle voiture"></div> -->
+        </div>
+    </div>
+    <div class="bordexterne"></div>
+
+    <script src="../scripts/changeNinveau.js"></script>
+    <script src="../scripts/collision.js"></script>
+    <script src="../scripts/fly.js"></script>
+    <script src="../scripts/frog.js"></script>
+    <script src="../scripts/maths.js"></script>
+    <script src="../scripts/obstacle.js"></script>
+    <script src="../scripts/stopBordure.js"></script>
+    <script src="../scripts/win.js"></script>
+</body>
+
+</html>

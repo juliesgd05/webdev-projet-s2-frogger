@@ -28,7 +28,7 @@ function checkWin() {
         frogRect.top < caseFinRect1.bottom &&
         frogRect.bottom > caseFinRect1.top
     ) {
-        caseFin1.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+        caseFin1.innerHTML = "<img src='../assets/victory.png' style='width: 100%; height: 100%;'>";
         caseFin1.classList.add("win"); //on lui met la class win
         // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
@@ -41,7 +41,7 @@ function checkWin() {
         frogRect.top < caseFinRect2.bottom &&
         frogRect.bottom > caseFinRect2.top
     ) {
-        caseFin2.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+        caseFin2.innerHTML = "<img src='../assets/victory.png' style='width: 100%; height: 100%;'>";
         caseFin2.classList.add("win"); //on lui met la class win
         // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
@@ -54,7 +54,7 @@ function checkWin() {
         frogRect.top < caseFinRect3.bottom &&
         frogRect.bottom > caseFinRect3.top
     ) {
-        caseFin3.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+        caseFin3.innerHTML = "<img src='../assets/victory.png' style='width: 100%; height: 100%;'>";
         caseFin3.classList.add("win"); //on lui met la class win
         // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
@@ -67,7 +67,7 @@ function checkWin() {
         frogRect.top < caseFinRect4.bottom &&
         frogRect.bottom > caseFinRect4.top
     ) {
-        caseFin4.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+        caseFin4.innerHTML = "<img src='../assets/victory.png' style='width: 100%; height: 100%;'>";
         caseFin4.classList.add("win"); //on lui met la class win
         // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
@@ -80,7 +80,7 @@ function checkWin() {
         frogRect.top < caseFinRect5.bottom &&
         frogRect.bottom > caseFinRect5.top
     ) {
-        caseFin5.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+        caseFin5.innerHTML = "<img src='../assets/victory.png' style='width: 100%; height: 100%;'>";
         caseFin5.classList.add("win"); //on lui met la class win
         // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
