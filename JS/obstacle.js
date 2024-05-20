@@ -161,6 +161,7 @@ class Obstacles {
                 if (getPosition(obstacle.target).left >= getPosition(document.getElementById("plateauDeJeu")).right) {
                     obstacle.remove();
                     ar.pop();
+		    this.obstacleCount--;
                 }
             }
 	}

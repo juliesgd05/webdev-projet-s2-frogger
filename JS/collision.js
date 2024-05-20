@@ -1,5 +1,4 @@
 
-
 /// Computes if there is any collision when called
 /// Args :
 /// - frog : a target to the frog
