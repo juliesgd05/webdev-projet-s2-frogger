@@ -11,10 +11,11 @@ function waterDeath(){
         frogRect.top < waterRect.bottom &&
         frogRect.bottom > waterRect.top
     ) {
-        console.log("Vous êtes mort noyé !!");
-        resetFrogPosition();
-        decreaseLife()
+        //console.log("Vous êtes mort noyé !!");
+        //resetFrogPosition();
+        //decreaseLife()
+	return true;
     }
-    }
-    setInterval(waterDeath, 100);
+    return false;
+}
     // verifie si la grenouille est dans l'eau, j'ai crée une nouvelle div qui prends toute l'eau, possible de mettre la div a part pour chaque rangée ça marcehra aussi
