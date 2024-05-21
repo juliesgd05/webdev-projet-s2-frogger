@@ -19,7 +19,6 @@ function collision(frog, obstacles) {
 	  posFrog.x > pos.left &&
 	  posFrog.x < pos.right
 	){
-		console.log(posFrog, pos);
        		return {"col" : true, "touched" : content[i]};     
         }
     }
@@ -30,7 +29,7 @@ function waterCollision(frog){
     let posFrogFull = getPosition(frog);
     let sizeFrog = getSize(frog);
     // Computes the x, y position of the center of the frog
-    let posFrog = {"x" : posFrogFull.right + sizeFrog.width/2, "y" : posFrogFull.top + sizeFrog.height/2};
+    let posFrog = {"x" : posFrogFull.left + sizeFrog.width/2, "y" : posFrogFull.top + sizeFrog.height/2};
     let posWater = getPosition(document.getElementById("water"));
     if(
         posFrog.x < posWater.right &&
