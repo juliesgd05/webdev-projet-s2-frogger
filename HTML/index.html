@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Frogger</title>
+    <title>Frogger Jeu</title>
+
 </head>
 
 <body>
@@ -29,36 +30,41 @@
         <div id="plateauDeJeu">
             <div class="frogger" id="frog"><img src="../IMAGE/frog.png" id="frogger_image"></div>
             <div class="arriver">
-               <div id="caseFin1" class="caseFin"> </div> <!--Id a la place de la classe, mieux pour le js plutard, class caseFin pour le css-->
-               <div id="caseFin2" class="caseFin"> </div>
-               <div id="caseFin3" class="caseFin"> </div>
-               <div id="caseFin4" class="caseFin"> </div>
-               <div id="caseFin5" class="caseFin"></div>
-            </div>
+                <div id="caseFin1" class="caseFin"> </div>
+                <!--Id a la place de la classe, mieux pour le js plutard, class caseFin pour le css-->
+                <div id="caseFin2" class="caseFin"> </div>
+                <div id="caseFin3" class="caseFin"> </div>
+                <div id="caseFin4" class="caseFin"> </div>
+                <div id="caseFin5" class="caseFin"></div>
+            </div>           
             <div id="water" class="eau">
-                <div class="rectangle"></div>
-                <div class="rectangle"></div>
-                <div class="rectangle"></div>
-                <div class="rectangle"></div>
-                <div class="rectangle"></div>
+                <div id="water1" class="rectangle"></div>
+                <div id="water2" class="rectangle"></div>
+                <div id="water3" class="rectangle"></div>
+                <div id="water4" class="rectangle"></div>
+                <div id="water5" class="rectangle"></div>
+            </div>
+
+            <div class="rectangle sansDanger"></div>
+
+            <div class="voiture">
+                <div id="ground1" class="rectangle"></div>
+                <div id="ground2" class="rectangle"></div>
+                <div id="ground3" class="rectangle"></div>
+                <div id="ground4" class="rectangle"></div>
+                <div id="ground5" class="rectangle"></div>
             </div>
             <div class="rectangle sansDanger"></div>
-            <div class="rectangle voiture"></div>
-            <div class="rectangle voiture"></div>
-            <div class="rectangle voiture"></div>
-            <div class="rectangle voiture"></div>
-            <div class="rectangle voiture"></div>
-            <div class="rectangle sansDanger"></div>
-            <div class="rectangle voiture"></div>
+
         </div>
     </div>
     <div class="bordexterne"></div>
 
+    <script src="../JS/functions.js"></script>
     <script src="../JS/changeNinveau.js"></script>
     <script src="../JS/collision.js"></script>
     <script src="../JS/fly.js"></script>
     <script src="../JS/frog.js"></script>
-    <script src="../JS/maths.js"></script>
     <script src="../JS/obstacle.js"></script>
     <script src="../JS/stopBordure.js"></script>
     <script src="../JS/win.js"></script>
