@@ -36,7 +36,7 @@ document.addEventListener("keydown", function (event) {
                 compteur += 10;
                 score += 10;
                 if (score == compteur) {
-                    document.getElementById("score").innerText = "Score: " + score;
+                    document.getElementById("score").innerText = score;
                 }
                 else { score = score - 10; }
                 moveFrog(0, -20);

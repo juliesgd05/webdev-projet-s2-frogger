@@ -216,17 +216,23 @@ class Obstacles {
 	//    this.content.water1.unshift(log);
         //    this.content.water2.unshift(log);
 	//    this.obstacleCount++;
-	this.spawnObstacle(Log, 10, this.content.water1, 1);
+	    this.spawnObstacle(Log, 15, this.content.water1, 1);
 
-        let log2 = new Log(8, this.refreshRate,5);
+        let log2 = new Log(20, this.refreshRate,5);
         this.content.water5.unshift(log2);
         this.obstacleCount++;
 
-        let log3 = new Log(12, this.refreshRate,3);
+        let log3 = new Log(22, this.refreshRate,3);
         this.content.water3.unshift(log3);
         this.obstacleCount++;
 
-        
+        let trutle1 = new Turtle(17, this.refreshRate,2);
+        this.content.water2.unshift(trutle1);
+        this.obstacleCount++;
+
+        let trutle2 = new Turtle(15, this.refreshRate,4);
+        this.content.water4.unshift(trutle2);
+        this.obstacleCount++;
 
         // let log2 = new Log(10, this.refreshRate,2);
 	    // this.content.water2.unshift(log2);
@@ -237,21 +243,23 @@ class Obstacles {
 	    this.content.ground1.unshift(truck);
 	    this.obstacleCount++;
 
-        let car1 = new Car1(10, this.refreshRate);
+        let car1 = new Car1(15, this.refreshRate);
 	    this.content.ground2.unshift(car1);
 	    this.obstacleCount++;
 
-        let car2 = new Car2(10, this.refreshRate);
+        let car2 = new Car2(18, this.refreshRate);
 	    this.content.ground3.unshift(car2);
 	    this.obstacleCount++;
 
-        let car3 = new Car3(10, this.refreshRate);
+        let car3 = new Car3(20, this.refreshRate);
 	    this.content.ground4.unshift(car3);
 	    this.obstacleCount++;
 
         let car4 = new Car4(10, this.refreshRate);
 	    this.content.ground5.unshift(car4);
 	    this.obstacleCount++;
+
+        
 
 	}
 	this.moveElements();
@@ -296,5 +304,5 @@ var c = new Obstacles(120);
 c.start(1);
 
 // TODO move this thing somewhere else
-document.getElementById("score").innerText = "Score: " + score;
+document.getElementById("score").innerText = score;
 
