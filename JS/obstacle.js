@@ -1,4 +1,5 @@
 
+
 class Obstacle {
 // This class is the basic representation of any type of obstacle
 // Every other type of obstacle are daughter classes of this one

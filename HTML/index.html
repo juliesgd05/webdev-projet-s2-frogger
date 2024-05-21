@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/obstacles.css">
-    <title>Frogger</title>
+    <title>Frogger Jeu</title>
+
 </head>
 
 <body>
@@ -30,12 +30,13 @@
         <div id="plateauDeJeu">
             <div class="frogger" id="frog"><img src="../IMAGE/frog.png" id="frogger_image"></div>
             <div class="arriver">
-               <div id="caseFin1" class="caseFin"> </div> <!--Id a la place de la classe, mieux pour le js plutard, class caseFin pour le css-->
-               <div id="caseFin2" class="caseFin"> </div>
-               <div id="caseFin3" class="caseFin"> </div>
-               <div id="caseFin4" class="caseFin"> </div>
-               <div id="caseFin5" class="caseFin"></div>
-            </div>
+                <div id="caseFin1" class="caseFin"> </div>
+                <!--Id a la place de la classe, mieux pour le js plutard, class caseFin pour le css-->
+                <div id="caseFin2" class="caseFin"> </div>
+                <div id="caseFin3" class="caseFin"> </div>
+                <div id="caseFin4" class="caseFin"> </div>
+                <div id="caseFin5" class="caseFin"></div>
+            </div>           
             <div id="water" class="eau">
                 <div id="water1" class="rectangle"></div>
                 <div id="water2" class="rectangle"></div>
@@ -43,13 +44,18 @@
                 <div id="water4" class="rectangle"></div>
                 <div id="water5" class="rectangle"></div>
             </div>
+
             <div class="rectangle sansDanger"></div>
-            <div id="ground1" class="rectangle voiture"></div>
-            <div id="ground2" class="rectangle voiture"></div>
-            <div id="ground3" class="rectangle voiture"></div>
-            <div id="ground4" class="rectangle voiture"></div>
-            <div id="ground5" class="rectangle voiture"></div>
+
+            <div class="voiture">
+                <div id="ground1" class="rectangle"></div>
+                <div id="ground2" class="rectangle"></div>
+                <div id="ground3" class="rectangle"></div>
+                <div id="ground4" class="rectangle"></div>
+                <div id="ground5" class="rectangle"></div>
+            </div>
             <div class="rectangle sansDanger"></div>
+
         </div>
     </div>
     <div class="bordexterne"></div>
