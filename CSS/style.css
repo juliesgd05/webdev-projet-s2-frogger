@@ -13,7 +13,7 @@ body{
 
 .bordexterne{
     padding-right: 25%;
-    background-color: white;
+    background-color: rgb(138, 41, 41);
     z-index: 5;
 }
 
@@ -118,32 +118,4 @@ body{
     margin-left: 20px; 
 }
 
-.truck{
-    background-image: url(../IMAGE/truck.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}
 
-.car1{
-    background-image: url(../IMAGE/car1.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}
-
-.car2{
-    background-image: url(../IMAGE/car2.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}
-
-.car3{
-    background-image: url(../IMAGE/car3.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}
-
-.car4{
-    background-image: url(../IMAGE/car4.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}

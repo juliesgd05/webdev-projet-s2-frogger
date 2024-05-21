@@ -92,16 +92,40 @@ class Turtle extends Obstacle {
 class Truck extends Obstacle {
 
     constructor(speed, refreshRate) {
-	super("l", speed, refreshRate, "car");
-	this.spawn("ground2");
+	super("l", speed, refreshRate, "truck");
+	this.spawn("ground1");
     }
 }
 
 class Car1 extends Obstacle {
 
     constructor(speed, refreshRate) {
-	super("r", speed, refreshRate, "car");
+	super("r", speed, refreshRate, "car1");
+	this.spawn("ground2");
+    }
+}
+
+class Car2 extends Obstacle {
+
+    constructor(speed, refreshRate) {
+	super("l", speed, refreshRate, "car2");
 	this.spawn("ground3");
+    }
+}
+
+class Car3 extends Obstacle {
+
+    constructor(speed, refreshRate) {
+	super("r", speed, refreshRate, "car3");
+	this.spawn("ground4");
+    }
+}
+
+class Car4 extends Obstacle {
+
+    constructor(speed, refreshRate) {
+	super("l", speed, refreshRate, "car4");
+	this.spawn("ground5");
     }
 }
 
@@ -170,8 +194,44 @@ class Obstacles {
     spawnLevel1() {
 	this.itCounter++;
 	if(this.itCounter % (this.refreshRate * 2) == 0){
-	    let log = new Log(10, this.refreshRate, 1);
+	    let log = new Log(10, this.refreshRate,1);
 	    this.content.water1.unshift(log);
+        // this.content.water2.unshift(log);
+	    this.obstacleCount++;
+
+        let log2 = new Log(8, this.refreshRate,5);
+        this.content.water5.unshift(log2);
+        this.obstacleCount++;
+
+        let log3 = new Log(12, this.refreshRate,3);
+        this.content.water3.unshift(log3);
+        this.obstacleCount++;
+
+        
+
+        // let log2 = new Log(10, this.refreshRate,2);
+	    // this.content.water2.unshift(log2);
+        // this.content.water2.shift(log2);
+	    // this.obstacleCount++;
+
+        let truck = new Truck(10, this.refreshRate);
+	    this.content.ground1.unshift(truck);
+	    this.obstacleCount++;
+
+        let car1 = new Car1(10, this.refreshRate);
+	    this.content.ground2.unshift(car1);
+	    this.obstacleCount++;
+
+        let car2 = new Car2(10, this.refreshRate);
+	    this.content.ground3.unshift(car2);
+	    this.obstacleCount++;
+
+        let car3 = new Car3(10, this.refreshRate);
+	    this.content.ground4.unshift(car3);
+	    this.obstacleCount++;
+
+        let car4 = new Car4(10, this.refreshRate);
+	    this.content.ground5.unshift(car4);
 	    this.obstacleCount++;
 
 	}
