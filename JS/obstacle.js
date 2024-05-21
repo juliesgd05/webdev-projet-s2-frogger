@@ -10,7 +10,7 @@ class Obstacle {
 //  - speed : the pourcentage of the board the obstacle travels every second 
     
     // Create an instance of Obstacle, see attributes
-    constructor(dir, speed, refreshRate, name) {
+    constructor(dir, speed, refreshRate, name, deadly) {
     	this.name = name;
         this.x = 0;
         this.y = 0;
@@ -22,6 +22,7 @@ class Obstacle {
 	this.boardPos = getPosition(document.getElementById("plateauDeJeu"));
 	// Convert the speed from a pourcentage of the board to a number of pixels
         this.speed = ((this.boardPos.right - this.boardPos.left)*(speed/100))/refreshRate;
+	this.deadly = deadly ? true : false;
     }
     
     // Spawn the obstacle as a child of the rectangle where it will live
@@ -73,7 +74,7 @@ class Obstacle {
 class Log extends Obstacle {
 
     constructor(speed, refreshRate, rank) {
-	super("r", speed, refreshRate, "log");
+	super("r", speed, refreshRate, "log", false);
 	if(! (rank == 1 || rank == 3 || rank == 5)){ rank = 1; }
 	this.spawn("water" + rank);
     }
@@ -83,7 +84,7 @@ class Log extends Obstacle {
 class Turtle extends Obstacle {
 
     constructor(speed, refreshRate, rank) {
-	super("l", speed, refreshRate, "turtle");
+	super("l", speed, refreshRate, "turtle", false);
 	if(! (rank == 2 || rank == 4)){ rank = 2; }
 	this.spawn("water" + rank);
     }
@@ -92,7 +93,7 @@ class Turtle extends Obstacle {
 class Truck extends Obstacle {
 
     constructor(speed, refreshRate) {
-	super("l", speed, refreshRate, "truck");
+	super("l", speed, refreshRate, "truck", true);
 	this.spawn("ground1");
     }
 }
@@ -100,7 +101,7 @@ class Truck extends Obstacle {
 class Car1 extends Obstacle {
 
     constructor(speed, refreshRate) {
-	super("r", speed, refreshRate, "car1");
+	super("r", speed, refreshRate, "car1", true);
 	this.spawn("ground2");
     }
 }
@@ -108,7 +109,7 @@ class Car1 extends Obstacle {
 class Car2 extends Obstacle {
 
     constructor(speed, refreshRate) {
-	super("l", speed, refreshRate, "car2");
+	super("l", speed, refreshRate, "car2", true);
 	this.spawn("ground3");
     }
 }
@@ -116,7 +117,7 @@ class Car2 extends Obstacle {
 class Car3 extends Obstacle {
 
     constructor(speed, refreshRate) {
-	super("r", speed, refreshRate, "car3");
+	super("r", speed, refreshRate, "car3", true);
 	this.spawn("ground4");
     }
 }
@@ -124,7 +125,7 @@ class Car3 extends Obstacle {
 class Car4 extends Obstacle {
 
     constructor(speed, refreshRate) {
-	super("l", speed, refreshRate, "car4");
+	super("l", speed, refreshRate, "car4", true);
 	this.spawn("ground5");
     }
 }
@@ -193,6 +194,20 @@ class Obstacles {
 		    this.obstacleCount--;
                 }
             }
+	}
+	let collided = collision(frog, this);
+	let death = waterDeath();
+	if(collided.col){
+	    if(collided.touched.deadly){
+		death = true;
+	    }else{
+		death = false;
+		moveFrog(collided.touched.speed, 0);	
+	    }
+	}
+	if(death){
+	    resetFrogPosition();
+	    decreaseLife();
 	}
     }
 
