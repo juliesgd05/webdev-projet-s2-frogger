@@ -182,7 +182,12 @@ class Obstacles {
 	    for (const obstacle of ar) {
                 obstacle.move();
 		// Check if the obstacle is outside of the board, if so dispawn it
-                if (getPosition(obstacle.target).left >= getPosition(document.getElementById("plateauDeJeu")).right) {
+                if (
+		    obstacle.dir == "r" &&
+		    getPosition(obstacle.target).left >= getPosition(document.getElementById("plateauDeJeu")).right ||
+		    obstacle.dir == "l" &&
+		    getPosition(obstacle.target).right <= getPosition(document.getElementById("plateauDeJeu")).left
+		) {
                     obstacle.remove();
                     ar.pop();
 		    this.obstacleCount--;
@@ -191,13 +196,26 @@ class Obstacles {
 	}
     }
 
+    spawnObstacle(type, speed, rankPlace, rank=0){
+	let obstacle;
+	if(rank == 0){
+	    obstacle = new type(speed, this.refreshRate);
+	}
+	else{
+	    obstacle = new type(speed, this.refreshRate, rank);
+	}
+	rankPlace.unshift(obstacle);
+	this.obstacleCount++;
+    }
+
     spawnLevel1() {
 	this.itCounter++;
 	if(this.itCounter % (this.refreshRate * 2) == 0){
-	    let log = new Log(10, this.refreshRate,1);
-	    this.content.water1.unshift(log);
-        // this.content.water2.unshift(log);
-	    this.obstacleCount++;
+	//    let log = new Log(10, this.refreshRate,1);
+	//    this.content.water1.unshift(log);
+        //    this.content.water2.unshift(log);
+	//    this.obstacleCount++;
+	this.spawnObstacle(Log, 10, this.content.water1, 1);
 
         let log2 = new Log(8, this.refreshRate,5);
         this.content.water5.unshift(log2);
