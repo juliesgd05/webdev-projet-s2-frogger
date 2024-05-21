@@ -45,6 +45,7 @@ class Obstacle {
 	    this.x = - (getSize(this.target).width); 
 	    this.target.style.left = (this.x + "px");
 	}
+	this.target.style.height += getSize(spawnDiv).height + "px";
 
     }
   
@@ -197,7 +198,7 @@ class Obstacles {
             }
 	}
 	let collided = collision(frog, this);
-	let death = waterDeath();
+	let death = waterCollision(frog);
 	if(collided.col){
 	    if(collided.touched.deadly){
 		death = true;
