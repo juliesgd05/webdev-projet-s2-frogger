@@ -19,6 +19,15 @@ function moveFrog(directionX, directionY) {
     frog.style.top = frogPositionY + "px";
     //console.log(frogPositionX + " / " + frogPositionY);
 }
+function moveFrogOnObject(directionX, directionY){
+    frogPositionX = directionX;
+    frogPositionY += directionY;
+    frog.style.left = directionX + "px";
+    frog.style.top = directionY + "px";
+}
+
+//45px Pour que les colision fonctione bien ! 
+const d = 44;
 
 // bouger la grenouille avec les stop bordure 
 document.addEventListener("keydown", function (event) {
@@ -26,7 +35,7 @@ document.addEventListener("keydown", function (event) {
         case "ArrowLeft":
             if (detectionSortiePlateauLargeur(frogPositionX - 20) == true) {
                 //console.log("coordonée : " + frogPositionX + " , " + frogPositionY + "; ArrowLeft = True");
-                moveFrog(-20, 0);
+                moveFrog(-d, 0);
                 frog.style.transform = "rotate(" + (-90) + "deg)";
             }
             break;
@@ -39,14 +48,14 @@ document.addEventListener("keydown", function (event) {
                     document.getElementById("score").innerText = score;
                 }
                 else { score = score - 10; }
-                moveFrog(0, -20);
+                moveFrog(0, -d);
                 frog.style.transform = "rotate(" + (0) + "deg)";
             }
             break;
         case "ArrowRight":
             if (detectionSortiePlateauLargeur(frogPositionX + 20) == true) {
                 //console.log("coordonée : " + frogPositionX + " , " + frogPositionY + "; ArrowRight = True");
-                moveFrog(20, 0);
+                moveFrog(d, 0);
                 frog.style.transform = "rotate(" + (90) + "deg)";
             }
             break;
@@ -54,12 +63,12 @@ document.addEventListener("keydown", function (event) {
             if (detectionSortiePlateauHauteurbas(frogPositionY + 20, tailleEcranHauteur) == true) {
                 //console.log("coordonée : " + frogPositionX + " , " + frogPositionY + "; ArrowDown = True");
                 compteur = compteur - 10;
-                moveFrog(0, 20);
+                moveFrog(0, d);
                 frog.style.transform = "rotate(" + (180) + "deg)";
             }
             break;
     }
-	collision(frog, c);	
+	// collision(frog, c);	
 });
 
 

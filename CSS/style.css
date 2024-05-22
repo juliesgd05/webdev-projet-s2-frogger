@@ -75,6 +75,7 @@ body{
 .rectangle{
     /* width: 50%; */
     height: 3.5vw;
+    position: relative;
     /* padding: 3.25% 0%; */
 	/* background-color:#069; */
 }
@@ -115,6 +116,7 @@ body{
 
 #frog{
     position: absolute;
+    z-index: 9;
 }
 
 .depart{
