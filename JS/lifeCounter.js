@@ -3,10 +3,12 @@ var lives = 3;
 function decreaseLife(){
     lives--;
     updateLifeDisplay();
+    alive()
 }
 function alive(){
     if(lives==0){
         console.log("GAME OVER");
+        document.location.href="gameOver.html"; 
     }
 }
 
