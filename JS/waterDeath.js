@@ -530,7 +530,6 @@ function waterDeath() {
     var waterRect = eau.getBoundingClientRect();
     var frogRect = frog.getBoundingClientRect();
 
-
     if ((frogRect.left < waterRect.right && frogRect.right > waterRect.left && frogRect.top < waterRect.bottom && frogRect.bottom > waterRect.top) && (frogOnObject === false)) {
         console.log("Vous êtes mort noyé !!");
         resetFrogPosition();
