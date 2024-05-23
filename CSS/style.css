@@ -83,6 +83,7 @@ body{
 .arriver{
     /* background-color: green; */
     background-image: url(../IMAGE/herbe.jpg);
+    background-size: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
