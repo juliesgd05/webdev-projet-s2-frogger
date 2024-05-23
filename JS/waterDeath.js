@@ -524,16 +524,16 @@ function colisionWithObjectWater() {
 }
 setInterval(colisionWithObjectWater, 20);
 
-function waterDeath() {
-    var eau = document.getElementById("water");
-    var frog = document.getElementById("frog");
-    var waterRect = eau.getBoundingClientRect();
-    var frogRect = frog.getBoundingClientRect();
+// function waterDeath() {
+//     var eau = document.getElementById("water");
+//     var frog = document.getElementById("frog");
+//     var waterRect = eau.getBoundingClientRect();
+//     var frogRect = frog.getBoundingClientRect();
 
-    if ((frogRect.left < waterRect.right && frogRect.right > waterRect.left && frogRect.top < waterRect.bottom && frogRect.bottom > waterRect.top) && (frogOnObject === false)) {
-        console.log("Vous êtes mort noyé !!");
-        resetFrogPosition();
-        decreaseLife()
-    }
-}
-setInterval(waterDeath, 20);
+//     if ((frogRect.left < waterRect.right && frogRect.right > waterRect.left && frogRect.top < waterRect.bottom && frogRect.bottom > waterRect.top) && (frogOnObject === false)) {
+//         console.log("Vous êtes mort noyé !!");
+//         resetFrogPosition();
+//         decreaseLife()
+//     }
+// }
+// setInterval(waterDeath, 20);
