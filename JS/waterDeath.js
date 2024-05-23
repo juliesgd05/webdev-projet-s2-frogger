@@ -524,16 +524,36 @@ function colisionWithObjectWater() {
 }
 setInterval(colisionWithObjectWater, 20);
 
-// function waterDeath() {
-//     var eau = document.getElementById("water");
-//     var frog = document.getElementById("frog");
-//     var waterRect = eau.getBoundingClientRect();
-//     var frogRect = frog.getBoundingClientRect();
+function waterDeath() {
+    var eau = document.getElementById("water");
+    var frog = document.getElementById("frog");
+    var waterRect = eau.getBoundingClientRect();
+    var frogRect = frog.getBoundingClientRect();
 
-//     if ((frogRect.left < waterRect.right && frogRect.right > waterRect.left && frogRect.top < waterRect.bottom && frogRect.bottom > waterRect.top) && (frogOnObject === false)) {
-//         console.log("Vous êtes mort noyé !!");
-//         resetFrogPosition();
-//         decreaseLife()
-//     }
-// }
-// setInterval(waterDeath, 20);
+    var padding = 5;
+
+ 
+    var adjustedFrogRect = {
+        left: frogRect.left + padding,
+        right: frogRect.right - padding,
+        top: frogRect.top + padding,
+        bottom: frogRect.bottom - padding
+    };
+
+  
+    var adjustedWaterRect = {
+        left: waterRect.left + padding,
+        right: waterRect.right - padding,
+        top: waterRect.top + padding,
+        bottom: waterRect.bottom - padding
+    };
+
+    if ((adjustedFrogRect.left < adjustedWaterRect.right && adjustedFrogRect.right > adjustedWaterRect.left && adjustedFrogRect.top < adjustedWaterRect.bottom && adjustedFrogRect.bottom > adjustedWaterRect.top) && (frogOnObject === false)) {
+        console.log("Vous êtes mort noyé !!");
+        resetFrogPosition();
+        decreaseLife();
+    }
+}
+
+setInterval(waterDeath, 20);
+
