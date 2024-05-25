@@ -145,28 +145,74 @@
 //     //	- intervalId : the id returned by the setInterval to be able to stop and change level
 
 
-//     constructor(refreshRate) {
-//         if (refreshRate == 0) {
-//             console.error("Invalid refresh rate, setting to default (60)");
-//             refreshRate = 60;
-//         }
-//         this.refreshRate = refreshRate
-//         this.content = {
-//             "water1": [],
-//             "water2": [],
-//             "water3": [],
-//             "water4": [],
-//             "water5": [],
-//             "ground1": [],
-//             "ground2": [],
-//             "ground3": [],
-//             "ground4": [],
-//             "ground5": []
-//         }
-//         this.obstacleCount = 0;
-//         this.itCounter = 0;
-//         this.intervalId = 0;
-//     }
+    constructor(refreshRate) {
+	if(refreshRate == 0){ 
+	    console.error("Invalid refresh rate, setting to default (60)");
+	    refreshRate = 60;
+	}
+	this.refreshRate = refreshRate
+	this.content = {
+	    "water1" : [],
+            "water2" : [],
+            "water3" : [],
+            "water4" : [],
+            "water5" : [],
+	    "ground1" : [],
+            "ground2" : [],
+            "ground3" : [],
+            "ground4" : [],
+            "ground5" : []
+	}
+	this.obstacleCount = 0;
+	this.itCounter = 0;
+	this.intervalId = 0;
+    }
+    
+    // The collision computation needs an array of all the obstacles, this method returns one
+    getContent() {
+	let content = [];
+	for(const [key, ar] of Object.entries(this.content)){
+	    for(const el of ar){
+		content.push(el);
+	    }
+	}
+	return content;
+    }
+    
+    // move all the obstacles and dispawn them if needed
+    moveElements() {
+
+	for(const [key, ar] of Object.entries(this.content)){
+	    for (const obstacle of ar) {
+                obstacle.move();
+		// Check if the obstacle is outside of the board, if so dispawn it
+                if (
+		    obstacle.dir == "r" &&
+		    getPosition(obstacle.target).left >= getPosition(document.getElementById("plateauDeJeu")).right ||
+		    obstacle.dir == "l" &&
+		    getPosition(obstacle.target).right <= getPosition(document.getElementById("plateauDeJeu")).left
+		) {
+                    obstacle.remove();
+                    ar.pop();
+		    this.obstacleCount--;
+                }
+            }
+	}
+	let collided = collision(frog, this);
+	let death = waterDeath();
+	if(collided.col){
+	    if(collided.touched.deadly){
+		death = true;
+	    }else{
+		death = false;
+		moveFrog(collided.touched.speed, 0);	
+	    }
+	}
+	if(death){
+	    resetFrogPosition();
+	    decreaseLife();
+	}
+    }
 
 //     // The collision computation needs an array of all the obstacles, this method returns one
 //     getContent() {
@@ -276,6 +322,10 @@
 //             this.content.ground5.unshift(car4);
 //             this.obstacleCount++;
 
+
+// test code 
+var c = new Obstacles(120);
+c.start(1);
 
 
 //         }

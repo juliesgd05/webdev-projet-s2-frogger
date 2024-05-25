@@ -20,61 +20,72 @@ let frogOnObject = false;
 //     setInterval(waterDeath, 100);
 // verifie si la grenouille est dans l'eau, j'ai crée une nouvelle div qui prends toute l'eau, possible de mettre la div a part pour chaque rangée ça marcehra aussi
 
+var hitboxwidth = 0;
+var hitboxheight = 0;
 
+Niv = sessionStorage.getItem('Niv');
+if (Niv == 2){
+    hitboxwidth = 5;
+    hitboxheight = 5;
+}
+else if (Niv == 3){
+    hitboxwidth = 10;
+    hitboxheight = 10;
+}
 
-const POM = frog.offsetWidth-10;
-const POM2 = frog.offsetHeight;
+const POM = frog.offsetWidth-10 + hitboxwidth;
+const POM2 = frog.offsetHeight-25 + hitboxheight;
 function carAndTruckDeath() {
     if (((c1_1.cordoX >= frog.offsetLeft - POM) && (c1_1.cordoX <= frog.offsetLeft + POM)) && (
-        (c1_1.whereY() >= frog.offsetTop - POM) && (c1_1.whereY() <= frog.offsetTop + POM))) {
+        (c1_1.whereY() >= frog.offsetTop - POM2) && (c1_1.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 1 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c2_1.cordoX >= frog.offsetLeft - POM) && (c2_1.cordoX <= frog.offsetLeft + POM)) && (
-        (c2_1.whereY() >= frog.offsetTop - POM) && (c2_1.whereY() <= frog.offsetTop + POM))) {
+        (c2_1.whereY() >= frog.offsetTop - POM2) && (c2_1.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 2_1 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c2_2.cordoX >= frog.offsetLeft - POM) && (c2_2.cordoX <= frog.offsetLeft + POM)) && (
-        (c2_2.whereY() >= frog.offsetTop - POM) && (c2_2.whereY() <= frog.offsetTop + POM))) {
+        (c2_2.whereY() >= frog.offsetTop - POM2) && (c2_2.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 2_2 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c2_3.cordoX >= frog.offsetLeft - POM) && (c2_3.cordoX <= frog.offsetLeft + POM)) && (
-        (c2_3.whereY() >= frog.offsetTop - POM) && (c2_3.whereY() <= frog.offsetTop + POM))) {
+        (c2_3.whereY() >= frog.offsetTop - POM2) && (c2_3.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 2_3 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c3_1.cordoX >= frog.offsetLeft - POM) && (c3_1.cordoX <= frog.offsetLeft + POM)) && (
-        (c3_1.whereY() >= frog.offsetTop - POM) && (c3_1.whereY() <= frog.offsetTop + POM))) {
+        (c3_1.whereY() >= frog.offsetTop - POM2) && (c3_1.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 3_1 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c3_2.cordoX >= frog.offsetLeft - POM) && (c3_2.cordoX <= frog.offsetLeft + POM)) && (
-        (c3_2.whereY() >= frog.offsetTop - POM) && (c3_2.whereY() <= frog.offsetTop + POM))) {
+        (c3_2.whereY() >= frog.offsetTop - POM2) && (c3_2.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 3_2 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c4_1.cordoX >= frog.offsetLeft - POM) && (c4_1.cordoX <= frog.offsetLeft + POM)) && (
-        (c4_1.whereY() >= frog.offsetTop - POM) && (c4_1.whereY() <= frog.offsetTop + POM))) {
+        (c4_1.whereY() >= frog.offsetTop - POM2) && (c4_1.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 4_1 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c4_2.cordoX >= frog.offsetLeft - POM) && (c4_2.cordoX <= frog.offsetLeft + POM)) && (
-        (c4_2.whereY() >= frog.offsetTop - POM) && (c4_2.whereY() <= frog.offsetTop + POM))) {
+        (c4_2.whereY() >= frog.offsetTop - POM2) && (c4_2.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 4_2 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((c4_3.cordoX >= frog.offsetLeft - POM) && (c4_3.cordoX <= frog.offsetLeft + POM)) && (
-        (c4_3.whereY() >= frog.offsetTop - POM) && (c4_3.whereY() <= frog.offsetTop + POM))) {
+        (c4_3.whereY() >= frog.offsetTop - POM2) && (c4_3.whereY() <= frog.offsetTop + POM2))) {
         console.log("Voiture 4_3 colision");
         resetFrogPosition();
         decreaseLife();
@@ -84,13 +95,13 @@ function carAndTruckDeath() {
 
     // ATTENTION COLISION PARTICULIAIRE PUISQUE CAMION
     if (((t1_1.cordoX >= frog.offsetLeft - POM - (t1_1.taille / 1.75)) && ((t1_1.cordoX) <= frog.offsetLeft + POM)) && (
-        (t1_1.whereY() >= frog.offsetTop - POM) && (t1_1.whereY() <= frog.offsetTop + POM))) {
+        (t1_1.whereY() >= frog.offsetTop - POM2) && (t1_1.whereY() <= frog.offsetTop + POM2))) {
         console.log("Camion 1_1 colision");
         resetFrogPosition();
         decreaseLife();
     }
     if (((t1_2.cordoX >= frog.offsetLeft - POM - (t1_1.taille / 1.75)) && (t1_2.cordoX <= frog.offsetLeft + POM)) && (
-        (t1_2.whereY() >= frog.offsetTop - POM) && (t1_2.whereY() <= frog.offsetTop + POM))) {
+        (t1_2.whereY() >= frog.offsetTop - POM2) && (t1_2.whereY() <= frog.offsetTop + POM2))) {
         console.log("Camion 1_2 colision");
         resetFrogPosition();
         decreaseLife();
