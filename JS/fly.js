@@ -1,4 +1,3 @@
-
 let winF = false;
 let intervalFly;
 

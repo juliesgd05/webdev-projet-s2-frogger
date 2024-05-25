@@ -11,7 +11,7 @@ var scoreDisplay = document.getElementById("score");
 var score = 0;
 var compteur = 0
 
-// faire bouger la granouille en fonction des paramettre qu'on lui donne 
+// faire bouger la grenouille en fonction des paramettre qu'on lui donne 
 function moveFrog(directionX, directionY) {
     frogPositionX += directionX;
     frogPositionY += directionY;
@@ -27,7 +27,7 @@ function moveFrogOnObject(directionX, directionY){
 }
 
 //45px Pour que les colision fonctione bien ! 
-const d = 44;
+const d = 43;
 
 // bouger la grenouille avec les stop bordure 
 document.addEventListener("keydown", function (event) {

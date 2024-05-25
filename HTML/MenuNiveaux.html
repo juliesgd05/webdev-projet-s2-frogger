@@ -4,42 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROGGER</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/obstacles.css">
-    <title>Frogger Jeu</title>
-
+    <link rel="stylesheet" href="../CSS/MenuNiveaux.css">
 </head>
 
 <body>
-
     <div class="bordexterne"></div>
-
     <div class="plateaueEntier">
 
-
-        <div class="scoreAffichage">
-            <div class="ligneScoreAffichage">
-                <div>Score :</div>
-                <div id="score" class="affichage">0</div>
-            </div>
-            <div class="ligneScoreAffichage">
-                <div>High Score :</div>
-                <div id="highScore">0</div>
-            </div>
-            <div id="vie" class ="nbvie"></div>
-        </div>
-
         <div id="plateauDeJeu">
-            <div class="frogger" id="frog"><img src="../IMAGE/frog.png" id="frogger_image"></div>
             <div class="arriver">
                 <div id="caseFin1" class="caseFin"> </div>
-                <!--Id a la place de la classe, mieux pour le js plutard, class caseFin pour le css-->
                 <div id="caseFin2" class="caseFin"> </div>
                 <div id="caseFin3" class="caseFin"> </div>
                 <div id="caseFin4" class="caseFin"> </div>
                 <div id="caseFin5" class="caseFin"></div>
-            </div>           
+            </div>
+            
             <div id="water" class="eau">
+                <div  class="dispositionBouton">
+                    <div class="button" onclick="RedirectionNiv1()">
+                        <h2>Level 1</h2>
+                    </div>
+                    <div class="button" onclick="RedirectionNiv2()">
+                        <h2>Level 2</h2>
+                    </div>
+                    <div class="button" onclick="RedirectionNiv3()">
+                        <h2>Level 3</h2>
+                    </div>
+                </div>
                 <div id="water1" class="rectangle"></div>
                 <div id="water2" class="rectangle"></div>
                 <div id="water3" class="rectangle"></div>
@@ -63,19 +57,6 @@
     <div class="bordexterne"></div>
 
     <script src="../JS/redirection.js"></script>
-    <script src="../JS/functions.js"></script>
-    <script src="../JS/changeNinveau.js"></script>
-    <script src="../JS/collision.js"></script>
-    <script src="../JS/fly.js"></script>
-    <script src="../JS/frog.js"></script>
-    <script src="../JS/NewObjectOnMap.js"></script>
-    <script src="../JS/Object.js"></script>
-    <script src="../JS/Map.js"></script>
-    <!--<script src="../JS/obstacle.js"></script>-->
-    <script src="../JS/stopBordure.js"></script>
-    <script src="../JS/win.js"></script>
-    <script src ="../JS/lifeCounter.js"></script>
-    <script src="../JS/waterDeath.js"></script>
 </body>
 
 </html>
