@@ -27,7 +27,7 @@ function moveFrogOnObject(directionX, directionY){
 }
 
 //45px Pour que les colision fonctione bien ! 
-const d = 43;
+const d = 44;
 
 // bouger la grenouille avec les stop bordure 
 document.addEventListener("keydown", function (event) {
