@@ -1,5 +1,3 @@
-
-/* TODO change from px to something else to insure correct scaling */
 .log {
     position: absolute;
     top: 0px;
@@ -58,8 +56,6 @@
     left: 0px;
     width: 170px;
     height: 60px;
-    /* max-width: 3vw;
-    max-height: 3vw; */
     background-image: url("../IMAGE/truck.png");
     background-size : 150px;
     z-index: 4;
@@ -109,32 +105,3 @@
     z-index: 4;
 }
 
-/* 
-.truck{
-    background-image: url(../IMAGE/truck.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}
-
-.car1{
-    background-image: url(../IMAGE/car1.png);
-    
-}
-
-.car2{
-    background-image: url(../IMAGE/car2.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}
-
-.car3{
-    background-image: url(../IMAGE/car3.png);
-    max-width: 3vw;
-    max-height: 3vw;
-}
-
-.car4{
-    background-image: url(../IMAGE/car4.png);
-    max-width: 3vw;
-    max-height: 3vw;
-} */

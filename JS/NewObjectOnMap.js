@@ -70,11 +70,3 @@ class MyObjects {
     }
 }
 
-
-
-// if (x >= 960) {
-//     clearInterval(intervalId);
-//     const ligne = document.getElementById(nameIdOfLigne);
-//     ligne.removeChild(objectToPlace);
-//     return;
-// }
