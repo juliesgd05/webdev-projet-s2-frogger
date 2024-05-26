@@ -12,7 +12,6 @@ body{
 
 .bordexterne{
     padding-right: 25%;
-    /* padding-top: 25%; */
     padding-bottom: 50%;
     background-color: rgb(0, 0, 0);
     z-index: 10;
@@ -28,8 +27,6 @@ body{
     display: flex;
     flex-direction: column;
     color: white;
-    /* padding-right:40%; */
-    /* padding-top: 1%; */
     width: 50%;
 }
 
@@ -37,8 +34,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* width: 5%; */
-    /* justify-content: center; */
 }
 
 .plateauDeJeu{
@@ -47,8 +42,7 @@ body{
     width: 50%;
 }
 
-.caseFin{ /*Remplacement par une classe generale */
-    /* background-color: #069; */
+.caseFin{ 
     background-image: url(../IMAGE/eau.jpeg);
     background-size: 100px;
     width: 10%;
@@ -62,27 +56,22 @@ body{
 .victory-img {
     width: 100%;
     height: 100%;
-    display: flex;  
-    /* flex-direction: row;        */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .victory-img img {
     max-width: 80%; 
-    max-height: 80%; /* Ajustez la taille de l'image selon vos besoins */
+    max-height: 80%; 
 }
 
 .rectangle{
-    /* width: 50%; */
     height: 3.5vw;
     position: relative;
-    /* padding: 3.25% 0%; */
-	/* background-color:#069; */
 }
 
 .arriver{
-    /* background-color: green; */
     background-image: url(../IMAGE/herbe.jpg);
     background-size: 50px;
     display: flex;
@@ -95,20 +84,17 @@ body{
 }
 
 .eau{
-	/* background-color:#069; */
     background-image: url(../IMAGE/eau.jpeg);
     background-size: 100px;
 }
 
 .sansDanger{
-    /* background-color: rgb(73, 108, 154); */
     background-image: url(../IMAGE/sol.jpg);
     background-size: 100px;
 }
 
 .voiture{
     background-color: black;
-    /* background-image: url(../IMAGE/istockphoto-482030962-612x612.jpg); */
 }
 
 .ligne{
@@ -145,8 +131,6 @@ body{
 } 
 
 #lives {
-    /* display: flex;
-    flex-direction: row; */
     margin-left: 20px; 
 }
 

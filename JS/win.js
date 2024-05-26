@@ -38,7 +38,6 @@ function checkWin() {
         else {
             caseFin1.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
             caseFin1.classList.add("win"); //on lui met la class win
-            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
             resetFrogPosition();
         }
 
@@ -59,7 +58,6 @@ function checkWin() {
         else {
             caseFin2.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
             caseFin2.classList.add("win"); //on lui met la class win
-            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
             resetFrogPosition();
         }
     }
@@ -79,7 +77,6 @@ function checkWin() {
         else {
             caseFin3.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
             caseFin3.classList.add("win"); //on lui met la class win
-            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
             resetFrogPosition();
         }
     }
@@ -99,7 +96,6 @@ function checkWin() {
         else {
             caseFin4.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
             caseFin4.classList.add("win"); //on lui met la class win
-            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
             resetFrogPosition();
         }
     }
@@ -119,7 +115,6 @@ function checkWin() {
         else {
             caseFin5.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
             caseFin5.classList.add("win"); //on lui met la class win
-            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
             resetFrogPosition();
         }
     }
