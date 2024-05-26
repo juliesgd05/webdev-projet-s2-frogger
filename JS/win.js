@@ -23,16 +23,24 @@ function checkWin() {
     var caseFinRect5 = caseFin5.getBoundingClientRect();
 
     // CaseFin 1
+
     if (
         frogRect.left < caseFinRect1.right &&
         frogRect.right > caseFinRect1.left &&
         frogRect.top < caseFinRect1.bottom &&
         frogRect.bottom > caseFinRect1.top
     ) {
-        caseFin1.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        caseFin1.classList.add("win"); //on lui met la class win
-        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
-        resetFrogPosition();
+        if (caseFin1.classList.contains("win")) {
+            decreaseLife();
+            resetFrogPosition();
+            console.log("deja grenouille")
+        }
+        else {
+            caseFin1.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+            caseFin1.classList.add("win"); //on lui met la class win
+            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+            resetFrogPosition();
+        }
 
     }
 
@@ -43,10 +51,17 @@ function checkWin() {
         frogRect.top < caseFinRect2.bottom &&
         frogRect.bottom > caseFinRect2.top
     ) {
-        caseFin2.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        caseFin2.classList.add("win"); //on lui met la class win
-        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
-        resetFrogPosition();
+        if (caseFin2.classList.contains("win")) {
+            decreaseLife();
+            resetFrogPosition();
+            console.log("deja grenouille")
+        }
+        else {
+            caseFin2.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+            caseFin2.classList.add("win"); //on lui met la class win
+            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+            resetFrogPosition();
+        }
     }
 
     // CaseFin 3
@@ -56,10 +71,17 @@ function checkWin() {
         frogRect.top < caseFinRect3.bottom &&
         frogRect.bottom > caseFinRect3.top
     ) {
-        caseFin3.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        caseFin3.classList.add("win"); //on lui met la class win
-        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
-        resetFrogPosition();
+        if (caseFin3.classList.contains("win")) {
+            decreaseLife();
+            resetFrogPosition();
+            console.log("deja grenouille")
+        }
+        else {
+            caseFin3.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+            caseFin3.classList.add("win"); //on lui met la class win
+            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+            resetFrogPosition();
+        }
     }
 
     // CaseFin 4
@@ -69,10 +91,17 @@ function checkWin() {
         frogRect.top < caseFinRect4.bottom &&
         frogRect.bottom > caseFinRect4.top
     ) {
-        caseFin4.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        caseFin4.classList.add("win"); //on lui met la class win
-        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
-        resetFrogPosition();
+        if (caseFin4.classList.contains("win")) {
+            decreaseLife();
+            resetFrogPosition();
+            console.log("deja grenouille")
+        }
+        else {
+            caseFin4.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+            caseFin4.classList.add("win"); //on lui met la class win
+            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+            resetFrogPosition();
+        }
     }
 
     // CaseFin 5
@@ -82,21 +111,33 @@ function checkWin() {
         frogRect.top < caseFinRect5.bottom &&
         frogRect.bottom > caseFinRect5.top
     ) {
-        caseFin5.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
-        caseFin5.classList.add("win"); //on lui met la class win
-        // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
-        resetFrogPosition();
+        if (caseFin5.classList.contains("win")) {
+            decreaseLife();
+            resetFrogPosition();
+            console.log("deja grenouille")
+        }
+        else {
+            caseFin5.innerHTML = "<img src='../IMAGE/victory.png' style='width: 100%; height: 100%;'>";
+            caseFin5.classList.add("win"); //on lui met la class win
+            // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
+            resetFrogPosition();
+        }
     }
+
+
 
     //Verification pour le changement de niveau
     if (caseFin1.classList.contains("win") && caseFin2.classList.contains("win") && caseFin3.classList.contains("win") && caseFin4.classList.contains("win") && caseFin5.classList.contains("win")) { //On Verifie si les cases contienne la class = win si ou alors on viens dire que on a gagner
+        document.location.href = "victoire.html";
+        console.log("victoie")
         caseFin3.classList.add("stop_fly");
         winC = true; // On lui passe en true comme ça, ça se stop
         clearInterval(intervalCheck); // stop l'interval
         console.log("Changement de Niveau !");
-        document.location.href = "victoire.html";
+        
 
     }
+
 }
 
 if (!winC) { // appel l'interval si winC == false
