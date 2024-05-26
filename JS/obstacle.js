@@ -145,6 +145,7 @@
 //     //	- intervalId : the id returned by the setInterval to be able to stop and change level
 
 
+/*
     constructor(refreshRate) {
 	if(refreshRate == 0){ 
 	    console.error("Invalid refresh rate, setting to default (60)");
@@ -213,6 +214,7 @@
 	    decreaseLife();
 	}
     }
+*/
 
 //     // The collision computation needs an array of all the obstacles, this method returns one
 //     getContent() {

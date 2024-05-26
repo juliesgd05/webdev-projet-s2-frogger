@@ -1,5 +1,5 @@
 
-let winC = false; 
+let winC = false;
 let intervalCheck;
 
 function checkWin() {
@@ -17,10 +17,11 @@ function checkWin() {
     // CaseFin 4
     var caseFin4 = document.getElementById("caseFin4");
     var caseFinRect4 = caseFin4.getBoundingClientRect();
+
     // CaseFin 5
     var caseFin5 = document.getElementById("caseFin5");
     var caseFinRect5 = caseFin5.getBoundingClientRect();
-    
+
     // CaseFin 1
     if (
         frogRect.left < caseFinRect1.right &&
@@ -32,6 +33,7 @@ function checkWin() {
         caseFin1.classList.add("win"); //on lui met la class win
         // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
+
     }
 
     // CaseFin 2
@@ -85,17 +87,18 @@ function checkWin() {
         // ChangeNiveau(caseFin1.innerHTML, caseFin2.innerHTML, caseFin3.innerHTML, caseFin4.innerHTML, caseFin5.innerHTML);
         resetFrogPosition();
     }
-    
+
     //Verification pour le changement de niveau
-    if(caseFin1.classList.contains("win") && caseFin2.classList.contains("win") && caseFin3.classList.contains("win") && caseFin4.classList.contains("win") && caseFin5.classList.contains("win")){ //On Verifie si les cases contienne la class = win si ou alors on viens dire que on a gagner
+    if (caseFin1.classList.contains("win") && caseFin2.classList.contains("win") && caseFin3.classList.contains("win") && caseFin4.classList.contains("win") && caseFin5.classList.contains("win")) { //On Verifie si les cases contienne la class = win si ou alors on viens dire que on a gagner
         caseFin3.classList.add("stop_fly");
         winC = true; // On lui passe en true comme ça, ça se stop
         clearInterval(intervalCheck); // stop l'interval
         console.log("Changement de Niveau !");
+        document.location.href = "victoire.html";
 
     }
 }
 
-if(!winC){ // appel l'interval si winC == false
+if (!winC) { // appel l'interval si winC == false
     intervalCheck = setInterval(checkWin, 100);
 }
