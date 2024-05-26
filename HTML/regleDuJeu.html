@@ -10,61 +10,104 @@
 
 <body>
     <h1>Règle Du Jeu</h1>
-    <div  class="dispositionBouton">
+    <div class="dispositionBouton">
         <div class="button" onclick="RedirectionPourRecommencer()">
             <h2>Acceuil</h2>
         </div>
     </div>
-    <div>
-        <h3>Système de jeu</h3>
-        <p class="text">Le but du jeu est de diriger des grenouilles jusqu'à leurs maisons.
-            Pour cela, le joueur doit d'abord traverser une route en évitant des
-            voitures qui roulent à différentes vitesses puis une rivière aux courants
-            changeants en passant d'objets en objets. La grenouille meurt si elle touche
-            une voiture ou si elle tombe dans la rivière. Elle peut attraper des mouches bonus au passage</p>
-    </div>
-    <div class="seDeplacer">
-        <h3>Comment se déplacer ?</h3>
-        <div class="elementSeDeplacer">
-            <p class="text">Pour se déplacer il faudra utiliser les flèche de votre clavier</p>
-            <img src="../IMAGE/flecheClavier.png" alt="TOuche flèche clavier">
+    <div class="systemeDeplacement">
+        <div class="systeme ">
+            <h3>Système de jeu</h3>
+            <p class="text">Le <b>but</b> du jeu est de diriger des grenouilles jusqu'à leurs maisons.
+                Pour cela, le joueur doit d'abord traverser une route en évitant des
+                voitures qui roulent à différentes vitesses puis une rivière aux courants
+                changeants en passant d'objets en objets. La grenouille meurt si elle touche
+                une voiture ou si elle tombe dans la rivière. Elle peut attraper des mouches bonus au passage</p>
+        </div>
+        <div class="seDeplacer systeme">
+            <h3>Comment se déplacer ?</h3>
+            <div class="elementSeDeplacer">
+                <p>Pour se <b>déplacer</b> il faudra utiliser les flèche de votre clavier</p>
+                <img src="../IMAGE/flecheClavier.png" alt="TOuche flèche clavier">
+            </div>
         </div>
     </div>
     <div class="paramettreDuJeu">
-        <div class="seDeplacer">
+        <div class="seDeplacer systeme">
             <h3>Personnage :</h3>
             <div class="elementSeDeplacer">
-                <p>La grenouille :</p>
+                <p><b>La grenouille :</b></p>
                 <img src="../IMAGE/frog.png" alt="la grenouille" id="grenouille">
             </div>
         </div>
 
-        <div class="seDeplacer">
+        <div class="seDeplacer systeme">
             <div>
                 <h3>Obstacles :</h3>
                 <div class="elementSeDeplacer">
-                    <p>Les voitures</p>
-                    <img src="" alt="obstacle la voiture">
+                    <p><b>Les voitures</b></p>
+                    <div class="dispositionVoiture">
+                        <img src="../IMAGE/car1.png" alt="obstacle la voiture 1" class="car">
+                        <img src="../IMAGE/car2.png" alt="obstacle la voiture 2" class="car">
+                        <img src="../IMAGE/car3.png" alt="obstacle la voiture 3" class="car">
+                        <img src="../IMAGE/car4.png" alt="obstacle la voiture 4" class="car">
+                    </div>
                 </div>
                 <div class="elementSeDeplacer">
-                    <p>Les troncs d'arbre</p>
+                    <p><b>Les troncs d'arbre</b></p>
                     <img src="../IMAGE/Obstacle.png" alt="obstacle le trons d'arbre" id="tron">
                 </div>
-            </div>
-        </div>
-        <div class="seDeplacer">
-            <h3>Le terrain :</h3>
-            <div class="elementSeDeplacer">
-                <div>
-                    <p>L'eau : pour la traverser il faut positionner la grenouille sur les trons d'arbres afin de ne pas
-                        mouriir et de perdre une vie </p>
-                    <p>la route : la grenouille peut aller sur la route sans mourir mais il faudra eviter les voitures
-                        pour
-                        ne pas perdre de vie</p>
+                <div class="elementSeDeplacer">
+                    <p><b>Les tortues</b></p>
+                    <img src="../IMAGE/turtle.png" alt="les tortues" id="tortue">
+                </div>
+                <div class="elementSeDeplacer">
+                    <p><b>Les caminons</b></p>
+                    <img src="../IMAGE/truck.png" alt="les tortues" id="camion">
                 </div>
             </div>
         </div>
     </div>
+    <div class="systemeDeplacement">
+        <div class="seDeplacer systeme">
+            <h3>Le terrain :</h3>
+            <div class="elementSeDeplacer">
+                <div>
+                    <p><b>L'eau :</b> Pour la traverser il faut positionner la grenouille sur les trons d'arbres ou les
+                        grenouilles afin d'éviter mouriir et de perdre une vie.</p>
+                    <p><b>La route :</b> La grenouille peut aller sur la route sans mourir mais il faudra eviter les
+                        voitures pour éviter perdre des vies.</p>
+                </div>
+            </div>
+        </div>
+        <div class="seDeplacer systeme">
+            <h3>Les points :</h3>
+            <div class="elementSeDeplacer">
+                <p>On gagne des <b>points</b> en avancant sur le plateau. En reculant, en allant vers la droite ou vers
+                    la gauche le nombre de point ne change pas.</p>
+            </div>
+        </div>
+    </div>
+    <div class="systemeDeplacement">
+        <div class="seDeplacer systeme">
+            <h3>La victoire</h3>
+            <div class="elementSeDeplacer">
+                <p>Pour <b>gagner</b> il faut remplir les cinqs nenuphar par une grenouille. C'est à dire qu'il faut
+                    parcourir 5 fois le plateau en allant à chauqe fois sur un nénuphar différent. Mais attention vous
+                    avez seuleument 3 vies alors faite s'en bon usage.</p>
+            </div>
+        </div>
+        <div class="seDeplacer systeme">
+            <h3>Les niveaux</h3>
+            <div class="elementSeDeplacer">
+                <p>En appuyant sur le bouton jouer, vous accéderez à une page où vous pourez choisir en trois niveaux.
+                    D'un niveau à l'autre la difficulté augmente avec la vitesse des objets qui augmente.</p>
+            </div>
+        </div>
+    </div>
+    <h1>A vous de jouer !</h1>
+
+
 
 
 
