@@ -42,3 +42,25 @@
     -moz-box-shadow: inset 0 -3px 0 rgb(0, 66, 0);
     box-shadow: inset 0 -3px 0 rgb(0, 66, 0);
 }
+
+@media screen and (max-width: 600px) {
+    .bordexterne{
+        display: none;
+    }
+
+    .plateaueEntier{
+        width: 80%;
+        z-index: 1;
+    }
+
+    .dispositionBouton{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+    }
+}
