@@ -14,6 +14,11 @@ function RedirectionPourRegleJeu(){
   document.location.href="regleDuJeu.html"; 
 }
 
+function RedirectionPourHistoireJeu(){
+  document.location.href="HistoireJeu.html"; 
+}
+
+
 let Niv = 0;
 function RedirectionNiv1(){
   document.location.href="index.html";
